@@ -1,0 +1,12 @@
+.pytest*
+.venv
+.vscode
+**/__pycache__
+__pycache__
+.ssh
+*egg-info/*
+*egg-info
+libs/*
+libs
+build
+*.pyc
