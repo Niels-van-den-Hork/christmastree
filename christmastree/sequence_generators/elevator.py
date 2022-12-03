@@ -1,18 +1,18 @@
 from typing import List, Iterator
-from sequence_generators import SequenceGenerator
-from data_structures import *
-
+from christmastree.sequence_generators import SequenceGenerator
+from christmastree.data_structures import *
 
 
 class ElevatorSequence(SequenceGenerator):
-    framerate = 30 
+    framerate = 30
+
     def __init__(self, locations: Iterator[LED]) -> None:
         super().__init__(locations)
-        self.colors = [RGB.RANDOM,RGB.RANDOM,RGB.RANDOM]
+        self.colors = [RGB.RANDOM, RGB.RANDOM, RGB.RANDOM]
         self.bar = 1
         self.bar2 = 5
 
-    def inc_bar(self,bar):
+    def inc_bar(self, bar):
         bar = bar + 0.21
         if bar > 4:
             bar = 0
@@ -24,14 +24,13 @@ class ElevatorSequence(SequenceGenerator):
         self.bar = self.inc_bar(self.bar)
 
         for led in self.led_list:
-            
-            led =  led.get_led_with_new_color(self.colors[2])
+
+            led = led.get_led_with_new_color(self.colors[2])
 
             if self.bar < led.location.z:
-                led = led.get_led_with_new_color(self.colors[1]) 
+                led = led.get_led_with_new_color(self.colors[1])
 
             if self.bar + 4 < led.location.z:
-                led = led.get_led_with_new_color(self.colors[0]) 
-
+                led = led.get_led_with_new_color(self.colors[0])
 
             yield led

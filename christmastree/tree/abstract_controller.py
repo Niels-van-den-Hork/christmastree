@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Iterator
 
-from data_structures import led, rgb, points
+from christmastree.data_structures import led, rgb, points
 
 
 class Controller(ABC):

@@ -1,8 +1,9 @@
 from __future__ import annotations
-from data_structures import points, rgb
+from christmastree.data_structures import points, rgb
 from typing import NewType, List
 
 LedIdentifier = NewType("LedIdentifier", int)
+
 
 class LED:
     def __init__(

@@ -1,5 +1,5 @@
-import image_processing
-from tests.conftest import FRONT_PATH, RIGHT_PATH, front_image
+from christmastree import image_processing
+from .conftest import FRONT_PATH, RIGHT_PATH, front_image
 
 
 def approx_equals(a, b, e):

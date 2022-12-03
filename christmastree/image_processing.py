@@ -3,7 +3,7 @@ from typing import Iterator
 from PIL import Image
 from PIL.Image import Image as PILImage
 
-from data_structures import points
+from christmastree.data_structures import points
 
 
 def _point_generator(width: int, height: int) -> Iterator[points.Point2D]:
@@ -37,7 +37,9 @@ def _locate_led_in_image_file(imagepath: str) -> points.Point2D:
         return _locate_led_in_image(image)
 
 
-def locate_led_in_images(front_image_file: str, right_image_file: str) -> points.Point3D:
+def locate_led_in_images(
+    front_image_file: str, right_image_file: str
+) -> points.Point3D:
     """returns the 3d location of the led in the images
 
     output is relative to the two camera positions.

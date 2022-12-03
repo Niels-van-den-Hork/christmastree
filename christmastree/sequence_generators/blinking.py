@@ -1,10 +1,10 @@
 from typing import List, Iterator
-from sequence_generators import SequenceGenerator
-from data_structures import *
+from christmastree.sequence_generators import SequenceGenerator
+from christmastree.data_structures import *
 
 
 class BlinkingSequence(SequenceGenerator):
-    framerate = 10 
+    framerate = 10
 
     def __init__(self, locations: Iterator[LED]) -> None:
         super().__init__(locations)
@@ -14,5 +14,5 @@ class BlinkingSequence(SequenceGenerator):
         self.is_on = not self.is_on
 
         for led in self.led_list:
-            led = led.get_led_with_new_color(RGB.RANDOM) 
+            led = led.get_led_with_new_color(RGB.RANDOM)
             yield led

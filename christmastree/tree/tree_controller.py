@@ -1,7 +1,7 @@
 from typing import List
 
-from data_structures import led, rgb, points
-from tree.abstract_controller import Controller
+from christmastree.data_structures import led, rgb, points
+from christmastree.tree.abstract_controller import Controller
 
 
 class TreeController(Controller):

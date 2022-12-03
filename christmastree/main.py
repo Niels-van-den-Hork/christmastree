@@ -3,10 +3,10 @@ from typing import Type
 
 # import led_registration
 # from camera import Camera
-from sequence_generators.sequence_generator import SequenceGenerator
-from tree.abstract_controller import Controller
-from tree.mock_controller import MockController
-from tree.mock_christmastree import MockChristmasTree
+from christmastree.sequence_generators.sequence_generator import SequenceGenerator
+from christmastree.tree.abstract_controller import Controller
+from christmastree.tree.mock_controller import MockController
+from christmastree.tree.mock_christmastree import MockChristmasTree
 
 # there can be two views on the positions:
 # 1. A led has a posistion
@@ -38,7 +38,7 @@ def animate(
     is_interactive: bool = True,
     is_multithreading: bool = True,
     num_steps: int = 1000,
-    num_leds: int = 250
+    num_leds: int = 250,
 ) -> None:
 
     locations = MockChristmasTree.create_led_in_cone_shape(num_leds)

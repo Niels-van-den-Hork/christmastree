@@ -10,7 +10,7 @@ import numpy as np
 
 # matplotlib.use('Agg')
 
-from data_structures import led, rgb, points
+from christmastree.data_structures import led, rgb, points
 
 MIN_LAYER = 1
 MAX_LAYER = 9

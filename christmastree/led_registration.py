@@ -4,8 +4,8 @@ from typing import List, Tuple
 
 import image_processing
 from camera import Camera
-from data_structures import led, points
-from tree.tree_controller import TreeController
+from christmastree.data_structures import led, points
+from christmastree.tree.tree_controller import TreeController
 
 # there can be two views on the positions:
 # 1. A led has a posistion
@@ -64,7 +64,9 @@ def _localise_all_leds() -> List[points.Point3D]:
     return all_locations
 
 
-def _get_bounding_box(locations: List[points.Point3D]) -> Tuple[points.Point3D, points.Point3D]:
+def _get_bounding_box(
+    locations: List[points.Point3D],
+) -> Tuple[points.Point3D, points.Point3D]:
     min_x = min([loc.x for loc in locations])
     max_x = max([loc.x for loc in locations])
     min_y = min([loc.y for loc in locations])

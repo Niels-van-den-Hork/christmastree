@@ -1,7 +1,7 @@
 from typing import List
 
-from sequence_generators import *
-from main import animate
+from christmastree import sequence_generators
+from christmastree import main
 
 import pytest
 
@@ -16,4 +16,10 @@ import pytest
     ],
 )
 def test_animate(is_interactive: bool, is_multithreading: bool):
-    animate(DecaySequence, is_interactive, is_multithreading, num_steps=100, num_leds = 100)
+    main.animate(
+        sequence_generators.DecaySequence,
+        is_interactive,
+        is_multithreading,
+        num_steps=100,
+        num_leds=100,
+    )

@@ -1,10 +1,10 @@
 from queue import Queue
 from typing import List, Iterator, Optional
 
-from data_structures import led
-from tree.abstract_controller import Controller
+from christmastree.data_structures import led
+from christmastree.tree.abstract_controller import Controller
 
-from tree.mock_christmastree import MockChristmasTree
+from christmastree.tree.mock_christmastree import MockChristmasTree
 
 import threading
 import matplotlib.pyplot as plt
